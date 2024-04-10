@@ -11,16 +11,20 @@ Verify Sign In Page Loaded
     Page Should Contain Element                     ${SIGN_IN_PAGE_HEADER}
 
 Enter email
-    Input Text      ${SIGN_IN_PAGE_EMAIL_BOX}       ${VALID_EMAIL}
+    [Arguments]     ${email}
+    Input Text      ${SIGN_IN_PAGE_EMAIL_BOX}       ${email}
 
 Enter password
-    Input Text      ${SIGN_IN_PAGE_PASSWORD_BOX}    ${VALID_PASSWORD}
+    [Arguments]     ${password}
+    Input Text      ${SIGN_IN_PAGE_PASSWORD_BOX}    ${password}
 
 Enter invalid email
-    Input Text      ${SIGN_IN_PAGE_EMAIL_BOX}       ${INVALID_EMAIL}
+    [Arguments]     ${email}
+    Input Text      ${SIGN_IN_PAGE_EMAIL_BOX}       ${email}
 
 Enter unknown email
-    Input Text      ${SIGN_IN_PAGE_EMAIL_BOX}       ${INVALID_UNKNOWN_EMAIL}
+    [Arguments]     ${email}
+    Input Text      ${SIGN_IN_PAGE_EMAIL_BOX}       ${email}
 
 Enter Email From List
 	[Arguments]     ${username}
@@ -31,15 +35,15 @@ Enter Password From List
     Input Text      ${SIGN_IN_PAGE_PASSWORD_BOX}    ${password}
 
 Capture Page Screenshot after entering invalid email
-    Sleep                                           2s
-    Execute Javascript                              window.resizeTo(1280, 1024)
+    
     Capture Page Screenshot                         ${SCREENSHOT_INVALID_EMAIL_SIGN_IN}
 
 Enter invalid password
-    Input Text      ${SIGN_IN_PAGE_PASSWORD_BOX}    ${INVALID_PASSWORD}
+    [Arguments]     ${password}
+    Input Text      ${SIGN_IN_PAGE_PASSWORD_BOX}    ${password}
 
 Capture Page Screenshot after entering invalid email and password
-    Sleep                                           1s
+   
     Capture Page Screenshot                         ${SCREENSHOT_INVALID_EMAIL_AND_PASSWORD_SIGN_IN}
 
 click sign in

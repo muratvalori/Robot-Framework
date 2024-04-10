@@ -5,12 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e62f7dcf-5fcf-4b29-a1d6-9676171309cc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Resources/Data/Data.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tests/ValoriWebShopDDTests.robot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/PO/SignInPage.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/PO/SignInPage.resource" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/Variables/TestCasesVariables.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Variables/TestCasesVariables.resource" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/ValoriWebShopAPITests.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/ValoriWebShopAPITests.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/Locators/OrderModalLocators.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Locators/OrderModalLocators.resource" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/Locators/TopNavLocators.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Locators/TopNavLocators.resource" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/PO/CheckoutPage.resource" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/PO/CheckoutPage.resource" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/ValoriWebShopTests.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/ValoriWebShopTests.robot" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +31,10 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2UT13yBVasF8JypPYTPDwkIF2sY" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -40,27 +43,65 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultPlantUmlFileTemplate&quot;: &quot;UML Component&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/ValoriRobotFrameWorkProject/Robot-Framework/Resources/ReferenceImages&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultPlantUmlFileTemplate": "UML Component",
+    "Robot.ValoriWebShopTests.robot.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "ValoriWebshopJorne",
+    "last_opened_file_path": "C:/ValoriRobotFrameWorkProject/Robot-Framework/Resources/ReferenceImages",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "configurable.group.project",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\ValoriRobotFrameWorkProject\Robot-Framework\Resources\ReferenceImages" />
       <recent name="C:\ValoriRobotFrameWorkProject\Robot-Framework\Resources\Documentation" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="ValoriWebShopTests.robot" type="RobotRunConfiguration" factoryName="RobotRunConfiguration" temporary="true">
+      <module name="Robot-Framework" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\JornevanZanden\AppData\Local\Programs\Python\Python311\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="robot.run" />
+      <option name="PARAMETERS" value="--suite &quot;Robot-Framework.Tests.ValoriWebShopTests&quot; ." />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="true" />
+      <option name="MODULE_MODE" value="true" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Robot.ValoriWebShopTests.robot" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-09665e90c3a7-d3b881c8e49f-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-233.15026.15" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

@@ -27,37 +27,41 @@ Go to Valori Webshop landing page
     LandingPage.Verify page loaded
 
 Sign in to Valori Webshop
+    [Arguments]    ${email}    ${password}
     TopNav.Click sign in link
     SignInPage.Verify Sign In page loaded
-    SignInPage.Enter Email
-    SignInPage.Enter password
+    SignInPage.Enter Email             ${email}
+    SignInPage.Enter password          ${password}
     SignInPage.Click sign in
     AccountPage.Verify Account page loaded
 
 Sign in to Valori Webshop with invalid email
+    [Arguments]    ${email}    ${password} 
     TopNav.Click sign in link
     SignInPage.Verify Sign In page loaded
-    SignInPage.Enter invalid Email
-    SignInPage.Enter password
+    SignInPage.Enter invalid Email    ${email}
+    SignInPage.Enter password         ${password}
     SignInPage.Click sign in
     SignInPage.Capture Page Screenshot after entering invalid email
     SignInPage.Compare screenshot after entering invalid email
     SignInPage.Verify if still on sign in page after entering invalid email and/or password
 
 Sign in to Valori Webshop with invalid password
+    [Arguments]    ${email}    ${password}
     TopNav.Click sign in link
     SignInPage.Verify Sign In page loaded
-    SignInPage.Enter Email
-    SignInPage.Enter invalid password
+    SignInPage.Enter Email              ${email}
+    SignInPage.Enter invalid password   ${password}
     SignInPage.Click sign in
     SignInPage.Verify authentication failed message displayed
     SignInPage.Verify if still on sign in page after entering invalid email and/or password
 
 Sign in to Valori Webshop with invalid email and password
+    [Arguments]    ${email}    ${password}
     TopNav.Click sign in link
     SignInPage.Verify Sign In page loaded
-    SignInPage.Enter unknown Email
-    SignInPage.Enter invalid password
+    SignInPage.Enter unknown Email       ${email}
+    SignInPage.Enter invalid password    ${password}
     SignInPage.Click sign in
     SignInPage.Verify authentication failed message displayed
     SignInPage.Verify if still on sign in page after entering invalid email and/or password
@@ -246,10 +250,11 @@ I am on the webshop homepage
     LandingPage.Load
 
 I login with valid credentials
+    [Arguments]    ${email}    ${password}
     TopNav.Click sign in link
     SignInPage.Verify Sign In page loaded
-    SignInPage.Enter Email
-    SignInPage.Enter password
+    SignInPage.Enter Email           ${email}          
+    SignInPage.Enter password        ${password}
     SignInPage.Click sign in
 
 I should see my account page
@@ -264,10 +269,11 @@ I should see search results for "Hummingbird t-shirt"
 	SearchResultsPage.Verify "Hummingbird t-shirt" product is found
 
 I login with invalid password
-	TopNav.Click sign in link
+	[Arguments]    ${email}    ${password}
+    TopNav.Click sign in link
     SignInPage.Verify Sign In page loaded
-    SignInPage.Enter Email
-    SignInPage.Enter invalid password
+    SignInPage.Enter Email              ${email}
+    SignInPage.Enter invalid password   ${password}
     SignInPage.Click sign in
 
 I should see an error message
