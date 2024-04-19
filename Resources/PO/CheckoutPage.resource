@@ -9,7 +9,8 @@ Verify Checkout page "Personal information" loaded
         Page Should Contain Element                      ${CHECKOUT_PAGE_PERSONAL_INFORMATION_HEADER}
 
 Choose an address
-	    Click Element                               ${CHECKOUT_PAGE_MY_ADDRESS_RADIO_BUTTON}
+        Wait Until Element Is Enabled                   ${CHECKOUT_PAGE_MY_ADDRESS_RADIO_BUTTON}
+        Click Element                                   ${CHECKOUT_PAGE_MY_ADDRESS_RADIO_BUTTON}
 
 
 Click "Addresses" "Continue" button
@@ -17,7 +18,7 @@ Click "Addresses" "Continue" button
 
 
 Verify Checkout page "Shipping method" loaded
-	    Wait Until Page Contains Element            ${CHECKOUT_PAGE_SHIPPING_METHOD_HEADER}
+        Wait Until Page Contains Element                ${CHECKOUT_PAGE_SHIPPING_METHOD_HEADER}
         Page Should Contain Element                     ${CHECKOUT_PAGE_SHIPPING_METHOD_HEADER}
 
 Choose shipping method "My carrier"

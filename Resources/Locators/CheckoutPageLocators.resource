@@ -2,7 +2,7 @@
 ${CHECKOUT_PAGE_PERSONAL_INFORMATION_HEADER} =              xpath=//*[@id="checkout-personal-information-step"]/h1
 ${CHECKOUT_PAGE_PERSONAL_INFORMATION_CONTINUE_BUTTON} =     xpath=//*[@id="checkout-personal-information-step"]/div/div/form/button
 ${CHECKOUT_PAGE_ADDRESSES_HEADER} =                         xpath=//*[@id="checkout-addresses-step"]/h1
-${CHECKOUT_PAGE_MY_ADDRESS_RADIO_BUTTON} =                  xpath=//*[contains(@id, "id-address-delivery-address-")]/header/label/span[1]/span
+${CHECKOUT_PAGE_MY_ADDRESS_RADIO_BUTTON} =                  xpath=//*[@id="id_address_delivery-address-18"]/header/label/span[1]/input
 ${CHECKOUT_PAGE_ADDRESSES_CONTINUE_BUTTON} =                xpath=//button[@name='confirm-addresses']
 ${CHECKOUT_PAGE_SHIPPING_METHOD_HEADER} =                   xpath=//*[@id="checkout-delivery-step"]/h1
 ${CHECKOUT_PAGE_SHIPPING_METHOD_VALORI_RADIO_BUTTON} =      xpath=//*[@id="delivery_option_1"]

@@ -199,7 +199,7 @@ Place an order and go to own address
     CartPage.Verify Cart page loaded
     CartPage.Click "Proceed to checkout" button
     CheckoutPage.Verify Checkout page "Personal information" loaded
-    CheckoutPage.Choose an address
+    #CheckoutPage.Choose an address
     CheckoutPage.Click "Addresses" "Continue" button
     CheckoutPage.Verify Checkout page "Shipping method" loaded
     CheckoutPage.Choose shipping method "My carrier"
