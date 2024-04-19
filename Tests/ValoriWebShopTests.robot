@@ -59,7 +59,7 @@ TC_WS_006 Should not be able to create an account without using "@" in the email
        
         ValoriWebShop.Create a "Mr." account on Valori Webshop with invalid email
 
-TC_WS_007 Should not be able to create account when using less than five charactere in password box.
+TC_WS_007 Should not be able to create account when using less than five characters in password box.
     [Documentation]     Enter invalid password and try to create an account
     [Tags]    TC_WS_007    Functional   Create Account
 
