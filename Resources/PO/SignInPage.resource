@@ -3,6 +3,7 @@ Library             SeleniumLibrary
 Library             ImageCompare
 Resource            ../Variables/TestCasesVariables.resource
 Resource            ../Locators/SignInPageLocators.resource
+Resource    OrderDetailsPage.resource
 
 *** Keywords ***
 
@@ -35,7 +36,7 @@ Enter Password From List
     Input Text      ${SIGN_IN_PAGE_PASSWORD_BOX}    ${password}
 
 Capture Page Screenshot after entering invalid email
-    
+    Sleep                                           2s                                                         
     Capture Page Screenshot                         ${SCREENSHOT_INVALID_EMAIL_SIGN_IN}
 
 Enter invalid password
@@ -43,7 +44,7 @@ Enter invalid password
     Input Text      ${SIGN_IN_PAGE_PASSWORD_BOX}    ${password}
 
 Capture Page Screenshot after entering invalid email and password
-   
+    Sleep                                           2s
     Capture Page Screenshot                         ${SCREENSHOT_INVALID_EMAIL_AND_PASSWORD_SIGN_IN}
 
 click sign in
@@ -58,7 +59,9 @@ Verify if still on sign in page after entering invalid email and/or password
     Page Should Contain Element                     ${SIGN_IN_PAGE_HEADER}
 
 Compare screenshot after entering invalid email
-    Compare Images                                  ${SCREENSHOT_INVALID_EMAIL_SIGN_IN_REFERENCE}       ${SCREENSHOT_INVALID_EMAIL_SIGN_IN}
+   Compare Images                                  ${SCREENSHOT_INVALID_EMAIL_SIGN_IN_REFERENCE}       ${SCREENSHOT_INVALID_EMAIL_SIGN_IN}
 
 Click create an account link
     Click Link                                      ${SIGN_IN_PAGE_CREATE_ACCOUNT_LINK}
+
+    

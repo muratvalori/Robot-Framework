@@ -11,3 +11,4 @@ ${TOP_NAV_ART_ELEMENT} =                xpath=//*[@id="category-9"]/a
 ${TOP_NAV_CONTACT_US_LINK} =            xpath=//*[@id="contact-link"]/a
 ${TOP_NAV_SEARCH_FIELD} =               name=s
 ${TOP_NAV_SEARCH_BUTTON} =              xpath=//div[@id='search_widget']/form/button/i
+${TOP_NAV_NEWLY_CREATED_ACCOUNT_LINK}   name=#_desktop_user_info > div > a.account > span

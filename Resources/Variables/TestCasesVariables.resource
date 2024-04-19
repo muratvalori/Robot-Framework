@@ -1,9 +1,9 @@
 *** Variables ***
 # Scalar variables
 ${BROWSER}                                      chrome
-${URL}                                          https://webshop.mobiletestautomation.nl
-${VALID_EMAIL}                                  dantester@jourrapide.com
-${VALID_PASSWORD}                               1qazxsw2
+${URL}                                          https://www.valoriwebshop.nl
+${VALID_EMAIL}                                  Replicant@tyrell.com
+${VALID_PASSWORD}                               TearsInRain
 ${INVALID_EMAIL}                                WrongEmail
 ${INVALID_UNKNOWN_EMAIL}                        Unknown@email.address
 ${INVALID_PASSWORD}                             WrongPassword

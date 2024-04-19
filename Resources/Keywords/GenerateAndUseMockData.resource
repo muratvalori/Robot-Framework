@@ -14,12 +14,12 @@ Generate And Use Valid "Create Account" Mock Data
         ${GENERATED_FIRST_NAME_NEW_ACCOUNT} =               Generate Random String      3               [LETTERS]
         ${GENERATED_LAST_NAME_NEW_ACCOUNT} =                Generate Random String      3               [LETTERS]
         ${GENERATED_EMAIL_NEW_ACCOUNT} =                    Generate Random String      3               [NUMBERS]
-        ${GENERATED_PASSWORD_NEW_ACCOUNT} =                 Generate Random String      5-10            [LETTERS][NUMBERS]
+        ${GENERATED_PASSWORD_NEW_ACCOUNT} =                 Generate Random String      10-12           [LETTERS][NUMBERS]
 
         Input Text    ${CREATE_ACCOUNT_PAGE_FIRST_NAME_BOX}       Roy
         Input Text    ${CREATE_ACCOUNT_PAGE_LAST_NAME_BOX}        Batty
         Input Text    ${CREATE_ACCOUNT_PAGE_EMAIL_BOX}            Replicant${GENERATED_EMAIL_NEW_ACCOUNT}@TEST.nl
-        Input Text    ${CREATE_ACCOUNT_PAGE_PASSWORD_BOX}         Password123!
+        Input Text    ${CREATE_ACCOUNT_PAGE_PASSWORD_BOX}         ${GENERATED_PASSWORD_NEW_ACCOUNT}
 
 Generate And Use "Create Account" Mock Data With Invalid Password
     [Documentation]     Generate random data for the Create Account page with invalid password

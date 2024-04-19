@@ -19,6 +19,9 @@ ${SIGN_IN_BUTTON} =            id=submit-login
 ${ACCOUNT_PAGE_HEADER} =       xpath=//*[@id="main"]/header/h1
 
 *** Test Cases ***
+
+
+
 Should be able to open Valori Webshop and look at Hummingbird Printed Sweater in detail
     Open Browser    ${BASE_URL}    ${BROWSER}
     Maximize Browser Window

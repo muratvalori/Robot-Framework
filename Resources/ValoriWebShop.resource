@@ -33,6 +33,7 @@ Sign in to Valori Webshop
     SignInPage.Enter Email             ${email}
     SignInPage.Enter password          ${password}
     SignInPage.Click sign in
+    TopNav.Click logged in user link
     AccountPage.Verify Account page loaded
 
 Sign in to Valori Webshop with invalid email
@@ -75,8 +76,10 @@ Create a "Mr." account on Valori Webshop
     GenerateAndUseMockData.Generate and Use Valid "Create Account" Mock Data
     CreateAccountPage.Enter date of birth
     CreateAccountPage.Click "Receive offers" checkbox
+    CreateAccountPage.Click "Agree to terms" checkbox
     CreateAccountPage.Click "Sign up for newsletter" checkbox
     CreateAccountPage.Click "Save" new account button
+    LandingPage.Verify page loaded
     TopNav.Click logged in user link
     AccountPage.Verify Account page loaded
 

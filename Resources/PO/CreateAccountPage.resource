@@ -44,6 +44,9 @@ Enter Date of Birth
 Click "Receive offers" checkbox
     Click Button                    ${CREATE_ACCOUNT_PAGE_OPTIN_OFFERS_CHECKBOX}
 
+Click "Agree to terms" checkbox
+    Click Button                    ${CREATE_ACCOUNT_PAGE_TERMS_CHECKBOX}
+
 Click "Sign up for newsletter" checkbox
     Click Button                    ${CREATE_ACCOUNT_PAGE_NEWSLETTER_CHECKBOX}
 

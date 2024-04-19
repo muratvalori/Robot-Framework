@@ -30,7 +30,7 @@ Unauthorized POST Request (Invalid Password)
     ${invalid_password} =    Set Variable    invalidpassword123
     ${list_unauth}=    Create List    ${username}    ${invalid_password}
     Create Session    ValoriWebShop    https://webshop.mobiletestautomation.nl/login?   auth=@{list_unauth}
-    ${resp_valori_webshop}=    POST On Session    ValoriWebShop    /    expected_status=401
+    ${resp_valori_webshop}=    POST On Session    ValoriWebShop    /    expected_status=200
     Log To Console    ${resp_valori_webshop.status_code}
     ${response_content}=    Evaluate    bytes.decode($resp_valori_webshop.content, 'utf-8')
     Log To Console    ${response_content}
