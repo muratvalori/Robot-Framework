@@ -8,10 +8,6 @@ Verify Checkout page "Personal information" loaded
         Wait Until Page Contains Element                 ${CHECKOUT_PAGE_PERSONAL_INFORMATION_HEADER}
         Page Should Contain Element                      ${CHECKOUT_PAGE_PERSONAL_INFORMATION_HEADER}
 
-Choose an address
-        Wait Until Element Is Enabled                   ${CHECKOUT_PAGE_MY_ADDRESS_RADIO_BUTTON}
-        Click Element                                   ${CHECKOUT_PAGE_MY_ADDRESS_RADIO_BUTTON}
-
 
 Click "Addresses" "Continue" button
         Click Button                                    ${CHECKOUT_PAGE_ADDRESSES_CONTINUE_BUTTON}
