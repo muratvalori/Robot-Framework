@@ -224,7 +224,7 @@ Send a message about the order and confirm that the message is sent
 
 Search for product and confirm that the product is found
     TopNav.Enter "Hummingbird t-shirt" in Search field
-    TopNav.Click "Search" button
+    #TopNav.Click "Search" button
     SearchResultsPage.Verify "Search results" page loaded
     SearchResultsPage.Verify "Hummingbird t-shirt" product is found
 
@@ -264,7 +264,7 @@ I should see my account page
 
 I search for "Hummingbird t-shirt"
 	TopNav.Enter "Hummingbird t-shirt" in Search field
-    TopNav.Click "Search" button
+    #TopNav.Click "Search" button
 
 I should see search results for "Hummingbird t-shirt"
     SearchResultsPage.Verify "Search results" page loaded

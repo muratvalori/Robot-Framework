@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.11.5 on win32)" generated="2024-04-22T10:34:11.672698" rpa="false" schemaversion="5">
+<suite id="s1" name="ValoriWebShopTests" source="c:\ValoriRobotFrameWorkProject\Robot-Framework\Tests\ValoriWebShopTests.robot">
+<test id="s1-t1" name="TC_WS-012 Should be able to search for product and confirm that the product is found" line="96">
+<kw name="Start web test" owner="Common" type="SETUP">
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>.00001s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2024-04-22T10:34:12.629940" elapsed="0.001034"/>
+</kw>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>3s</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2024-04-22T10:34:12.630974" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-04-22T10:34:12.630974" level="INFO">Starting the test case!</msg>
+<arg>Starting the test case!</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-04-22T10:34:12.630974" elapsed="0.001969"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-04-22T10:34:12.634952" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<msg time="2024-04-22T10:34:13.031675" level="WARN">The chromedriver version (123.0.6312.122) detected in PATH at C:\bin\chromedriver.exe might not be compatible with the detected chrome version (124.0.6367.61); currently, chromedriver 124.0.6367.60 is recommended for chrome 124.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-04-22T10:34:12.632943" elapsed="1.450211"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-04-22T10:34:14.083662" level="INFO">Opening url 'https://www.valoriwebshop.nl'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-04-22T10:34:14.083154" elapsed="3.042476"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-04-22T10:34:17.126034" elapsed="0.112957"/>
+</kw>
+<status status="PASS" start="2024-04-22T10:34:12.629789" elapsed="4.609202"/>
+</kw>
+<kw name="Search for product and confirm that the product is found" owner="ValoriWebShop">
+<kw name="Enter &quot;Hummingbird t-shirt&quot; in Search field" owner="TopNav">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-22T10:34:17.241078" level="INFO">Typing text 'Hummingbird t-shirt' into text field 'name=s'.</msg>
+<arg>${TOP_NAV_SEARCH_FIELD}</arg>
+<arg>${ITEM_SEARCH}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-22T10:34:17.240681" elapsed="0.104959"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-04-22T10:34:17.346188" level="INFO">Sending key(s) ('ENTER',) to name=s element.</msg>
+<msg time="2024-04-22T10:34:17.634884" level="INFO">Pressing special key ENTER to element.</msg>
+<msg time="2024-04-22T10:34:17.634884" level="INFO">Releasing special key ENTER.</msg>
+<arg>${TOP_NAV_SEARCH_FIELD}</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-04-22T10:34:17.346188" elapsed="0.770304"/>
+</kw>
+<status status="PASS" start="2024-04-22T10:34:17.240252" elapsed="0.876240"/>
+</kw>
+<kw name="Verify &quot;Search results&quot; page loaded" owner="SearchResultsPage">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${SEARCH_RESULTS_PAGE_HEADER}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-04-22T10:34:18.117502" elapsed="0.012596"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-04-22T10:34:18.138853" level="INFO">Current page contains element 'xpath=//*[@id="js-product-list-header"]'.</msg>
+<arg>${SEARCH_RESULTS_PAGE_HEADER}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-04-22T10:34:18.130098" elapsed="0.009280"/>
+</kw>
+<status status="PASS" start="2024-04-22T10:34:18.116492" elapsed="0.022886"/>
+</kw>
+<kw name="Verify &quot;Hummingbird t-shirt&quot; product is found" owner="SearchResultsPage">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-04-22T10:34:18.149820" level="INFO">Current page contains element 'xpath=//a[contains(text(),'Hummingbird printed t-shirt')]'.</msg>
+<arg>${SEARCH_RESULTS_PAGE_HUMMINGBIRD_TSHIRT_PRODUCT}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-04-22T10:34:18.139779" elapsed="0.010041"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-04-22T10:34:18.158724" level="INFO">Current page contains element 'xpath=//span[@class='price' and contains(text(), '28.92')]'.</msg>
+<arg>${SEARCH_RESULTS_PAGE_HUMMINGBIRD_TSHIRT_PRICE}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-04-22T10:34:18.149820" elapsed="0.008904"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-04-22T10:34:18.171050" level="INFO">Current page contains element 'xpath=//img[@alt='Hummingbird printed t-shirt']'.</msg>
+<arg>${SEARCH_RESULTS_PAGE_HUMMINGBIRD_TSHIRT_IMAGE}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-04-22T10:34:18.158724" elapsed="0.012326"/>
+</kw>
+<status status="PASS" start="2024-04-22T10:34:18.139779" elapsed="0.031271"/>
+</kw>
+<status status="PASS" start="2024-04-22T10:34:17.238991" elapsed="0.932059"/>
+</kw>
+<kw name="End web test" owner="Common" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-04-22T10:34:18.172836" elapsed="2.155723"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-04-22T10:34:20.330695" level="INFO">Ending the test case!</msg>
+<arg>Ending the test case!</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-04-22T10:34:20.329604" elapsed="0.001091"/>
+</kw>
+<status status="PASS" start="2024-04-22T10:34:18.172057" elapsed="2.158638"/>
+</kw>
+<doc>Search for product and confirm that the product is found</doc>
+<tag>Functional</tag>
+<tag>Search Product</tag>
+<tag>TC_WS_012</tag>
+<status status="PASS" start="2024-04-22T10:34:12.627311" elapsed="7.704270"/>
+</test>
+<status status="PASS" start="2024-04-22T10:34:11.675486" elapsed="8.657536"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">Functional</stat>
+<stat pass="1" fail="0" skip="0">Search Product</stat>
+<stat pass="1" fail="0" skip="0">TC_WS_012</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="ValoriWebShopTests">ValoriWebShopTests</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-04-22T10:34:13.031675" level="WARN">The chromedriver version (123.0.6312.122) detected in PATH at C:\bin\chromedriver.exe might not be compatible with the detected chrome version (124.0.6367.61); currently, chromedriver 124.0.6367.60 is recommended for chrome 124.*, so it is advised to delete the driver in PATH and retry</msg>
+</errors>
+</robot>
