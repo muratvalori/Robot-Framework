@@ -29,10 +29,6 @@ Enter "Hummingbird t-shirt" in Search field
     Input Text                          ${TOP_NAV_SEARCH_FIELD}             ${ITEM_SEARCH}
     Press Keys                          ${TOP_NAV_SEARCH_FIELD}             ENTER
 
-
-Click "Search" button
-	Click Element                       ${TOP_NAV_SEARCH_BUTTON}
-
 Click "Contact us" link
     Click Element                       ${TOP_NAV_CONTACT_US_LINK}
 

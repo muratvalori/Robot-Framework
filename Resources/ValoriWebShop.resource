@@ -215,7 +215,7 @@ Send a message about the order and confirm that the message is sent
     AccountPage.Verify Account page loaded
     AccountPage.Click "Order History and Details" Element
     OrderHistoryPage.Verify "Order History" page loaded
-    OrderHistoryPage.Click "Order DAGEDQZUV Details" Link
+    OrderHistoryPage.Click "Order Details" Link
     OrderDetailsPage.Verify "Order Details" page loaded
     OrderDetailsPage.Select Product "Mountain fox cushion" from Dropdown
     OrderDetailsPage.Enter Message "What does the fox say?" in Textarea
@@ -224,7 +224,6 @@ Send a message about the order and confirm that the message is sent
 
 Search for product and confirm that the product is found
     TopNav.Enter "Hummingbird t-shirt" in Search field
-    #TopNav.Click "Search" button
     SearchResultsPage.Verify "Search results" page loaded
     SearchResultsPage.Verify "Hummingbird t-shirt" product is found
 

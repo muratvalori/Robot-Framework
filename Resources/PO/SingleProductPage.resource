@@ -31,9 +31,9 @@ Select "Dimensions" "80 x 120cm"
     Select From List By Label               ${SINGLE_PRODUCT_PAGE_DIMENSIONS_DROPDOWN}      ${SINGLE_PRODUCT_PAGE_DIMENSIONS_DROPDOWN_OPTION_80x120}
 
 Click "Add to cart" button
+    Wait Until Page Contains Element        ${SINGLE_PRODUCT_PAGE_ADD_TO_CART_BUTTON}
     Mouse Down                              ${SINGLE_PRODUCT_PAGE_ADD_TO_CART_BUTTON}
     Click Button                            ${SINGLE_PRODUCT_PAGE_ADD_TO_CART_BUTTON}
-    Mouse Up                                ${SINGLE_PRODUCT_PAGE_ADD_TO_CART_BUTTON}
 
 Click "Home" Link
     Click Element                           ${SINGLE_PRODUCT_PAGE_HOME_LINK}

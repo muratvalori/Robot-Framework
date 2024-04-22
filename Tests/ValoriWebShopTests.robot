@@ -29,7 +29,7 @@ TC_WS_001 Should be able to sign in webshop
 
         ValoriWebShop.Sign in to Valori Webshop                                  ${VALID_EMAIL}    ${VALID_PASSWORD}
 
-TC_WS002 Should not be able to login with invalid email and valid password
+TC_WS_002 Should not be able to login with invalid email and valid password
     [Documentation]     Enter an invalid username&password and try to sign in
     [Tags]    TC_WS_002    Functional   Sign in Webshop
 
