@@ -1,121 +1,260 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.11.5 on win32)" generated="2024-04-22T10:34:11.672698" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.11.5 on win32)" generated="2024-04-22T11:11:25.864008" rpa="false" schemaversion="5">
 <suite id="s1" name="ValoriWebShopTests" source="c:\ValoriRobotFrameWorkProject\Robot-Framework\Tests\ValoriWebShopTests.robot">
-<test id="s1-t1" name="TC_WS-012 Should be able to search for product and confirm that the product is found" line="96">
+<test id="s1-t1" name="TC_WS_011 Should be able to send a message about the order and confirm that the message is sent" line="89">
 <kw name="Start web test" owner="Common" type="SETUP">
 <kw name="Set Selenium Speed" owner="SeleniumLibrary">
 <arg>.00001s</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" start="2024-04-22T10:34:12.629940" elapsed="0.001034"/>
+<status status="PASS" start="2024-04-22T11:11:26.896330" elapsed="0.000544"/>
 </kw>
 <kw name="Set Selenium Timeout" owner="SeleniumLibrary">
 <arg>3s</arg>
 <doc>Sets the timeout that is used by various keywords.</doc>
-<status status="PASS" start="2024-04-22T10:34:12.630974" elapsed="0.000000"/>
+<status status="PASS" start="2024-04-22T11:11:26.896874" elapsed="0.000558"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2024-04-22T10:34:12.630974" level="INFO">Starting the test case!</msg>
+<msg time="2024-04-22T11:11:26.897432" level="INFO">Starting the test case!</msg>
 <arg>Starting the test case!</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-04-22T10:34:12.630974" elapsed="0.001969"/>
+<status status="PASS" start="2024-04-22T11:11:26.897432" elapsed="0.001678"/>
 </kw>
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-04-22T10:34:12.634952" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
-<msg time="2024-04-22T10:34:13.031675" level="WARN">The chromedriver version (123.0.6312.122) detected in PATH at C:\bin\chromedriver.exe might not be compatible with the detected chrome version (124.0.6367.61); currently, chromedriver 124.0.6367.60 is recommended for chrome 124.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2024-04-22T11:11:26.900137" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<msg time="2024-04-22T11:11:27.358188" level="WARN">The chromedriver version (123.0.6312.122) detected in PATH at C:\bin\chromedriver.exe might not be compatible with the detected chrome version (124.0.6367.61); currently, chromedriver 124.0.6367.60 is recommended for chrome 124.*, so it is advised to delete the driver in PATH and retry</msg>
 <arg>about:blank</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-04-22T10:34:12.632943" elapsed="1.450211"/>
+<status status="PASS" start="2024-04-22T11:11:26.899600" elapsed="1.586239"/>
 </kw>
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2024-04-22T10:34:14.083662" level="INFO">Opening url 'https://www.valoriwebshop.nl'</msg>
+<msg time="2024-04-22T11:11:28.485839" level="INFO">Opening url 'https://www.valoriwebshop.nl'</msg>
 <arg>${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2024-04-22T10:34:14.083154" elapsed="3.042476"/>
+<status status="PASS" start="2024-04-22T11:11:28.485839" elapsed="4.205355"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-04-22T10:34:17.126034" elapsed="0.112957"/>
+<status status="PASS" start="2024-04-22T11:11:32.691194" elapsed="0.116649"/>
 </kw>
-<status status="PASS" start="2024-04-22T10:34:12.629789" elapsed="4.609202"/>
+<status status="PASS" start="2024-04-22T11:11:26.895239" elapsed="5.912604"/>
 </kw>
-<kw name="Search for product and confirm that the product is found" owner="ValoriWebShop">
-<kw name="Enter &quot;Hummingbird t-shirt&quot; in Search field" owner="TopNav">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-04-22T10:34:17.241078" level="INFO">Typing text 'Hummingbird t-shirt' into text field 'name=s'.</msg>
-<arg>${TOP_NAV_SEARCH_FIELD}</arg>
-<arg>${ITEM_SEARCH}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-22T10:34:17.240681" elapsed="0.104959"/>
+<kw name="Sign in to Valori Webshop" owner="ValoriWebShop">
+<kw name="Click Sign In Link" owner="TopNav">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-22T11:11:32.810002" level="INFO">Clicking element 'xpath=//div[@id='_desktop_user_info']/div/a/i'.</msg>
+<arg>${TOP_NAV_SIGN_IN_LINK}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-22T11:11:32.809366" elapsed="0.336045"/>
 </kw>
-<kw name="Press Keys" owner="SeleniumLibrary">
-<msg time="2024-04-22T10:34:17.346188" level="INFO">Sending key(s) ('ENTER',) to name=s element.</msg>
-<msg time="2024-04-22T10:34:17.634884" level="INFO">Pressing special key ENTER to element.</msg>
-<msg time="2024-04-22T10:34:17.634884" level="INFO">Releasing special key ENTER.</msg>
-<arg>${TOP_NAV_SEARCH_FIELD}</arg>
-<arg>ENTER</arg>
-<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="PASS" start="2024-04-22T10:34:17.346188" elapsed="0.770304"/>
+<status status="PASS" start="2024-04-22T11:11:32.809366" elapsed="0.336045"/>
 </kw>
-<status status="PASS" start="2024-04-22T10:34:17.240252" elapsed="0.876240"/>
-</kw>
-<kw name="Verify &quot;Search results&quot; page loaded" owner="SearchResultsPage">
+<kw name="Verify Sign In Page Loaded" owner="SignInPage">
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
-<arg>${SEARCH_RESULTS_PAGE_HEADER}</arg>
+<arg>${SIGN_IN_PAGE_HEADER}</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2024-04-22T10:34:18.117502" elapsed="0.012596"/>
+<status status="PASS" start="2024-04-22T11:11:33.145411" elapsed="0.021781"/>
 </kw>
 <kw name="Page Should Contain Element" owner="SeleniumLibrary">
-<msg time="2024-04-22T10:34:18.138853" level="INFO">Current page contains element 'xpath=//*[@id="js-product-list-header"]'.</msg>
-<arg>${SEARCH_RESULTS_PAGE_HEADER}</arg>
+<msg time="2024-04-22T11:11:33.177379" level="INFO">Current page contains element 'xpath=//*[@id="main"]/header/h1'.</msg>
+<arg>${SIGN_IN_PAGE_HEADER}</arg>
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
-<status status="PASS" start="2024-04-22T10:34:18.130098" elapsed="0.009280"/>
+<status status="PASS" start="2024-04-22T11:11:33.167916" elapsed="0.010475"/>
 </kw>
-<status status="PASS" start="2024-04-22T10:34:18.116492" elapsed="0.022886"/>
+<status status="PASS" start="2024-04-22T11:11:33.145411" elapsed="0.032980"/>
 </kw>
-<kw name="Verify &quot;Hummingbird t-shirt&quot; product is found" owner="SearchResultsPage">
+<kw name="Enter email" owner="SignInPage">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-22T11:11:33.179386" level="INFO">Typing text 'Replicant@tyrell.com' into text field 'name=email'.</msg>
+<arg>${SIGN_IN_PAGE_EMAIL_BOX}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-22T11:11:33.178391" elapsed="0.099748"/>
+</kw>
+<arg>${email}</arg>
+<status status="PASS" start="2024-04-22T11:11:33.178391" elapsed="0.099748"/>
+</kw>
+<kw name="Enter password" owner="SignInPage">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-22T11:11:33.279171" level="INFO">Typing text 'TearsInRain' into text field 'name=password'.</msg>
+<arg>${SIGN_IN_PAGE_PASSWORD_BOX}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-22T11:11:33.278139" elapsed="0.076886"/>
+</kw>
+<arg>${password}</arg>
+<status status="PASS" start="2024-04-22T11:11:33.278139" elapsed="0.076886"/>
+</kw>
+<kw name="click sign in" owner="SignInPage">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-04-22T11:11:33.356391" level="INFO">Clicking button 'id=submit-login'.</msg>
+<arg>${SIGN_IN_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-22T11:11:33.355025" elapsed="0.720593"/>
+</kw>
+<status status="PASS" start="2024-04-22T11:11:33.355025" elapsed="0.720873"/>
+</kw>
+<kw name="Click Logged in user link" owner="TopNav">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${TOP_NAV_LOGGED_IN_USER}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-04-22T11:11:34.077010" elapsed="0.013520"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-22T11:11:34.090530" level="INFO">Clicking element 'xpath=//*[@id="_desktop_user_info"]/div/a[2]/span'.</msg>
+<arg>${TOP_NAV_LOGGED_IN_USER}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-22T11:11:34.090530" elapsed="0.335595"/>
+</kw>
+<status status="PASS" start="2024-04-22T11:11:34.075898" elapsed="0.350227"/>
+</kw>
+<kw name="Verify Account Page Loaded" owner="AccountPage">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${ACCOUNT_PAGE_HEADER}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-04-22T11:11:34.427134" elapsed="0.017888"/>
+</kw>
 <kw name="Page Should Contain Element" owner="SeleniumLibrary">
-<msg time="2024-04-22T10:34:18.149820" level="INFO">Current page contains element 'xpath=//a[contains(text(),'Hummingbird printed t-shirt')]'.</msg>
-<arg>${SEARCH_RESULTS_PAGE_HUMMINGBIRD_TSHIRT_PRODUCT}</arg>
+<msg time="2024-04-22T11:11:34.455681" level="INFO">Current page contains element 'xpath=//*[@id="main"]/header[contains(@class, 'page-header')]/h1[normalize-space()='Your account']'.</msg>
+<arg>${ACCOUNT_PAGE_HEADER}</arg>
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
-<status status="PASS" start="2024-04-22T10:34:18.139779" elapsed="0.010041"/>
+<status status="PASS" start="2024-04-22T11:11:34.445022" elapsed="0.010659"/>
+</kw>
+<status status="PASS" start="2024-04-22T11:11:34.426125" elapsed="0.030561"/>
+</kw>
+<arg>${VALID_EMAIL}</arg>
+<arg>${VALID_PASSWORD}</arg>
+<status status="PASS" start="2024-04-22T11:11:32.808850" elapsed="1.647836"/>
+</kw>
+<kw name="Send a message about the order and confirm that the message is sent" owner="ValoriWebShop">
+<kw name="Click on &quot;YOUR ACCOUNT&quot; Link" owner="FooterNav">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-04-22T11:11:34.458056" level="INFO">Clicking link 'xpath=//*[@id="block_myaccount_infos"]/p/a'.</msg>
+<arg>${FOOTER_NAV_YOUR_ACCOUNT_LINK}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-22T11:11:34.458056" elapsed="0.289587"/>
+</kw>
+<status status="PASS" start="2024-04-22T11:11:34.456686" elapsed="0.290957"/>
+</kw>
+<kw name="Verify Account Page Loaded" owner="AccountPage">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${ACCOUNT_PAGE_HEADER}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-04-22T11:11:34.747643" elapsed="0.012432"/>
 </kw>
 <kw name="Page Should Contain Element" owner="SeleniumLibrary">
-<msg time="2024-04-22T10:34:18.158724" level="INFO">Current page contains element 'xpath=//span[@class='price' and contains(text(), '28.92')]'.</msg>
-<arg>${SEARCH_RESULTS_PAGE_HUMMINGBIRD_TSHIRT_PRICE}</arg>
+<msg time="2024-04-22T11:11:34.767160" level="INFO">Current page contains element 'xpath=//*[@id="main"]/header[contains(@class, 'page-header')]/h1[normalize-space()='Your account']'.</msg>
+<arg>${ACCOUNT_PAGE_HEADER}</arg>
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
-<status status="PASS" start="2024-04-22T10:34:18.149820" elapsed="0.008904"/>
+<status status="PASS" start="2024-04-22T11:11:34.760075" elapsed="0.007085"/>
+</kw>
+<status status="PASS" start="2024-04-22T11:11:34.747643" elapsed="0.020524"/>
+</kw>
+<kw name="Click &quot;Order History and Details&quot; Element" owner="AccountPage">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-22T11:11:34.769168" level="INFO">Clicking element 'xpath=//*[@id="history-link"]/span/i'.</msg>
+<arg>${ACCOUNT_PAGE_ORDER_HISTORY_ELEMENT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-22T11:11:34.769168" elapsed="0.357693"/>
+</kw>
+<status status="PASS" start="2024-04-22T11:11:34.768167" elapsed="0.358694"/>
+</kw>
+<kw name="Verify &quot;Order History&quot; page loaded" owner="OrderHistoryPage">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${ORDER_HISTORY_PAGE_HEADER}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-04-22T11:11:35.127866" elapsed="0.019630"/>
+</kw>
+<status status="PASS" start="2024-04-22T11:11:35.127866" elapsed="0.019630"/>
+</kw>
+<kw name="Click &quot;Order DAGEDQZUV Details&quot; Link" owner="OrderHistoryPage">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-04-22T11:11:35.148515" level="INFO">Clicking link 'xpath=//a[contains(@href, 'id_order=11') and contains(@class, 'view-order-details-link')]'.</msg>
+<arg>${ORDER_HISTORY_PAGE_ORDER_NUMBER_DAGEDQZUV_DETAILS}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-22T11:11:35.147496" elapsed="0.587273"/>
+</kw>
+<status status="PASS" start="2024-04-22T11:11:35.147496" elapsed="0.587273"/>
+</kw>
+<kw name="Verify &quot;Order Details&quot; page loaded" owner="OrderDetailsPage">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${ORDER_DETAILS_PAGE_HEADER}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-04-22T11:11:35.735783" elapsed="0.016474"/>
 </kw>
 <kw name="Page Should Contain Element" owner="SeleniumLibrary">
-<msg time="2024-04-22T10:34:18.171050" level="INFO">Current page contains element 'xpath=//img[@alt='Hummingbird printed t-shirt']'.</msg>
-<arg>${SEARCH_RESULTS_PAGE_HUMMINGBIRD_TSHIRT_IMAGE}</arg>
+<msg time="2024-04-22T11:11:35.763671" level="INFO">Current page contains element 'xpath=//*[@id="main"]/header/h1'.</msg>
+<arg>${ORDER_DETAILS_PAGE_HEADER}</arg>
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
-<status status="PASS" start="2024-04-22T10:34:18.158724" elapsed="0.012326"/>
+<status status="PASS" start="2024-04-22T11:11:35.752257" elapsed="0.011414"/>
 </kw>
-<status status="PASS" start="2024-04-22T10:34:18.139779" elapsed="0.031271"/>
+<status status="PASS" start="2024-04-22T11:11:35.735783" elapsed="0.027888"/>
 </kw>
-<status status="PASS" start="2024-04-22T10:34:17.238991" elapsed="0.932059"/>
+<kw name="Select Product &quot;Mountain fox cushion&quot; from Dropdown" owner="OrderDetailsPage">
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-04-22T11:11:35.765191" level="INFO">Selecting options from selection list 'name=id_product' by label Mountain fox cushion (Color: Black).</msg>
+<arg>${ORDER_DETAILS_PAGE_PRODUCT_DROPDOWN}</arg>
+<arg>${MOUNTAIN_FOX_CUSHION_ORDER}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-04-22T11:11:35.765191" elapsed="0.092948"/>
+</kw>
+<status status="PASS" start="2024-04-22T11:11:35.763671" elapsed="0.094468"/>
+</kw>
+<kw name="Enter Message &quot;What does the fox say?&quot; in Textarea" owner="OrderDetailsPage">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-22T11:11:35.858139" level="INFO">Typing text 'What does the fox say?' into text field 'name=msgText'.</msg>
+<arg>${ORDER_DETAILS_PAGE_MESSAGE_FIELD}</arg>
+<arg>${MOUNTAIN_FOX_CUSHION_MESSAGE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-22T11:11:35.858139" elapsed="0.082469"/>
+</kw>
+<status status="PASS" start="2024-04-22T11:11:35.858139" elapsed="0.082469"/>
+</kw>
+<kw name="Click &quot;Send&quot; button" owner="OrderDetailsPage">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-04-22T11:11:35.941645" level="INFO">Clicking element 'name=submitMessage'.</msg>
+<arg>${ORDER_DETAILS_PAGE_SEND_MESSAGE_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-22T11:11:35.941645" elapsed="0.821766"/>
+</kw>
+<status status="PASS" start="2024-04-22T11:11:35.940608" elapsed="0.822803"/>
+</kw>
+<kw name="Verify &quot;Message succesfully sent&quot; message displayed" owner="OrderDetailsPage">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${ORDER_DETAILS_PAGE_SUCCESS_SENT_MESSAGE}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-04-22T11:11:36.764444" elapsed="0.013882"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-04-22T11:11:36.789708" level="INFO">Current page contains element 'xpath=//*[@id="notifications"]/div/article/ul/li'.</msg>
+<arg>${ORDER_DETAILS_PAGE_SUCCESS_SENT_MESSAGE}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-04-22T11:11:36.778326" elapsed="0.011382"/>
+</kw>
+<status status="PASS" start="2024-04-22T11:11:36.763411" elapsed="0.026297"/>
+</kw>
+<status status="PASS" start="2024-04-22T11:11:34.456686" elapsed="2.333022"/>
 </kw>
 <kw name="End web test" owner="Common" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-04-22T10:34:18.172836" elapsed="2.155723"/>
+<status status="PASS" start="2024-04-22T11:11:36.789708" elapsed="2.155539"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2024-04-22T10:34:20.330695" level="INFO">Ending the test case!</msg>
+<msg time="2024-04-22T11:11:38.946257" level="INFO">Ending the test case!</msg>
 <arg>Ending the test case!</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-04-22T10:34:20.329604" elapsed="0.001091"/>
+<status status="PASS" start="2024-04-22T11:11:38.946257" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2024-04-22T10:34:18.172057" elapsed="2.158638"/>
+<status status="PASS" start="2024-04-22T11:11:36.789708" elapsed="2.156549"/>
 </kw>
-<doc>Search for product and confirm that the product is found</doc>
+<doc>Send a message about the order and confirm that the message is sent</doc>
 <tag>Functional</tag>
-<tag>Search Product</tag>
-<tag>TC_WS_012</tag>
-<status status="PASS" start="2024-04-22T10:34:12.627311" elapsed="7.704270"/>
+<tag>Send Message</tag>
+<tag>TC_WS_011</tag>
+<status status="PASS" start="2024-04-22T11:11:26.893100" elapsed="12.054155"/>
 </test>
-<status status="PASS" start="2024-04-22T10:34:11.675486" elapsed="8.657536"/>
+<status status="PASS" start="2024-04-22T11:11:25.869591" elapsed="13.079037"/>
 </suite>
 <statistics>
 <total>
@@ -123,14 +262,14 @@
 </total>
 <tag>
 <stat pass="1" fail="0" skip="0">Functional</stat>
-<stat pass="1" fail="0" skip="0">Search Product</stat>
-<stat pass="1" fail="0" skip="0">TC_WS_012</stat>
+<stat pass="1" fail="0" skip="0">Send Message</stat>
+<stat pass="1" fail="0" skip="0">TC_WS_011</stat>
 </tag>
 <suite>
 <stat pass="1" fail="0" skip="0" id="s1" name="ValoriWebShopTests">ValoriWebShopTests</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2024-04-22T10:34:13.031675" level="WARN">The chromedriver version (123.0.6312.122) detected in PATH at C:\bin\chromedriver.exe might not be compatible with the detected chrome version (124.0.6367.61); currently, chromedriver 124.0.6367.60 is recommended for chrome 124.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2024-04-22T11:11:27.358188" level="WARN">The chromedriver version (123.0.6312.122) detected in PATH at C:\bin\chromedriver.exe might not be compatible with the detected chrome version (124.0.6367.61); currently, chromedriver 124.0.6367.60 is recommended for chrome 124.*, so it is advised to delete the driver in PATH and retry</msg>
 </errors>
 </robot>
